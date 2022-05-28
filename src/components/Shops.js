@@ -1,9 +1,10 @@
 import ShopList from './shopList'
 import SearchBar from "./searchBar"
 import Filter from "./filter"
+import {useState} from 'react'
 
 export default function Careers(){
-
+ const [display,setdisplay]=useState(false)
     // const clickHandler=(e)=>{
     //   e.preventDefault()
     //   router.reload()
@@ -20,7 +21,8 @@ export default function Careers(){
 
             <div className="m-auto flex flex-col my-8">
                 <div className="">
-                    <Filter/>
+                    <button onClick={()=>setdisplay(!display)} className='text-center m-auto block md:hidden'>Filters</button>
+                    <Filter display={display}/>
                 </div>
                 <div className="">
                     <ShopList/>
