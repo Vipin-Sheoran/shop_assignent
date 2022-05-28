@@ -1,9 +1,5 @@
-import DeleteIcon from '@mui/icons-material/Delete';
-import {removeFormData} from '../actions/index'
-import { useDispatch } from "react-redux"
 
 export default function ShopCard({item}){
-    const dispatch=useDispatch()
     return(
         <div className="mx-20 flex flex-row px-12 bg-slate-50 drop-shadow-xl w-132 rounded-md cursor-pointer py-4">
         <div className="flex flex-col flex-1 space-y-4">
