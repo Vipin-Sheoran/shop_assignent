@@ -41,10 +41,10 @@ export default function ShopForm(){
     }
  
     return(
-        <div className="flex py-10">
+        <div className="flex pb-6">
             <form onSubmit={SubmitHandler} className="flex flex-col m-auto p-8 bg-white rounded-md space-y-4 drop-shadow-2xl">
                 <input placeholder="Shop Name" 
-                className="rounded-md border-2 border-[#f1eff5] p-2 placeholder:font-semibold font-semibold placeholder:text-indigo-600 text-indigo-600"
+                className="rounded-md border-2 border-[#f1eff5] p-2 placeholder:font-semibold font-semibold text-indigo-600"
                 value={name}
                 onChange={(e)=>{setName(e.target.value)}}
                 required/>
@@ -73,7 +73,7 @@ export default function ShopForm(){
                         })
                     }
                 </select>
-                <DateRangePicker showOneCalendar onChange={(value)=>dateChangeHandler(value)} placeholder="select opening and closing date"/>
+                <DateRangePicker className="z-50" showOneCalendar onChange={(value)=>dateChangeHandler(value)} placeholder="select opening,closing date"/>
                 <button className='rounded-md bg-indigo-600 p-2 text-white font-semibold hover:bg-indigo-400'>Add Shop</button>
             </form>
         </div>
